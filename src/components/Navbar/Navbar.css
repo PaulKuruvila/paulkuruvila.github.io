@@ -1,0 +1,199 @@
+.NavItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10pt;
+    background-color: rgb(0, 0, 0, 0.8);
+    min-height: 15vh;
+    width: 100%;
+    white-space: nowrap;
+    position: fixed;
+    z-index: 2;
+    visibility: visible;
+    transition: all 0.3s;
+}
+
+.NavItems-hide{
+    visibility: hidden;
+}
+
+/* .TitleLogo{
+    content:'';
+    background-image: url('/src/assets/icons/PK\ icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 64px;
+    width: 64px;
+} */
+
+.Title {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    justify-self: start;
+    margin-left: 20px;
+}
+
+
+.scroll-page{
+    display: none;
+    position: fixed;
+    content: '';
+    background-image: url('/src/assets/images/loading_LoZ.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+    bottom:0;
+    right: 0;
+    transform: translate(-50%,-50%);   
+}
+
+.TitleGif{
+    cursor: help;
+    content:'';
+    background-image: url('/src/assets/images/Link_LoZ.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 43px;
+}
+
+.TitleText {
+    animation: TitleColors 6s linear infinite;
+    font-size: 30pt;
+    font-family: 'Sci-Fi';
+    font-weight: lighter;
+}
+
+@keyframes TitleColors{
+    0%{
+        color: rgb(85, 30, 225);
+    }
+    25%{
+        color: rgb(75, 20, 215);
+    }
+    50%{
+        color: rgb(145, 60, 208)
+    }
+    75%{
+        color: rgb(75, 20, 215);
+    }
+    100%{
+        color: rgb(85, 30, 225);
+    }
+}
+
+.TitleText:hover{
+    color: rgb(200, 235, 200);
+    font-size: 31pt;
+    font-weight:bolder;
+    cursor: pointer;
+}
+
+.DropdownMenu{
+    display:none;
+    font-size: 1.8rem;
+    cursor:pointer;
+}
+
+.DropdownMenu:hover{
+    font-size: 1.81rem;
+}
+
+.NavMenu {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-gap: 5px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    padding: 5vh;
+    margin-right: 20px;
+}
+
+.nav-links {
+    color:limegreen;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    padding: 25px;
+    scroll-behavior: smooth;
+}
+
+.nav-links:hover{
+    background-color: limegreen;
+    font-size: 11pt;
+    color:black;
+    border-radius: 25px;
+    transition: all 0.2s ease-in;
+}
+
+.fa-bars {
+    color:limegreen;
+}
+
+.fa-bars:hover{
+    color: green;
+}
+
+.fa-times{
+    color: limegreen;
+}
+
+.fa-times:hover{
+    color: green;
+}
+
+@media screen and (max-width: 930px){
+    .nav-links{
+        display: table;
+        text-align: center;
+        padding: 2px;
+        width:100%;
+    }
+
+    .nav-links:hover{
+        background-color: limegreen;
+        color: black;
+        border-radius: 0;
+    }
+
+    .NavItems{
+        justify-content: start;
+        position: fixed;
+    }
+
+    .NavMenu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 0vh;
+        left: 0;
+        opacity: 1;
+        visibility: hidden;
+    }
+
+    .NavMenu.active{
+        background-color: rgb(85, 30, 225);
+        top:100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        visibility: visible;
+        z-index: 1;
+    }
+
+    .DropdownMenu{
+        display: block;
+        position: absolute;
+        top:20%;
+        right: 5%;   
+    }
+
+    .TitleGif{
+        height: 50px;
+        width: 50px;
+        margin-left: 5%;
+    }
+}

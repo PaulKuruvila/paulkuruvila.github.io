@@ -1,38 +1,297 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin:0;
+  padding:0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Sci-Fi';
+  src: url('./assets/fonts/JlsspacegothicRnc-n2zY.otf');
+  src: url('./assets/fonts/JlsspacegothicRnc-n2zY.otf?#iefix') format('embedded-opentype'),
+       url('./assets/fonts/JlsspacegothicRnc-n2zY.otf?#woff2') format('woff2'),
+       url('./assets/fonts/JlsspacegothicRnc-n2zY.otf') format('woff'),
+       url('./assets/fonts/JlsspacegothicRnc-n2zY.otf') format('truetype'),
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar {
+  width: 0.5vw;
 }
 
-.App-header {
-  background-color: #282c34;
+::-webkit-scrollbar-track{
+  background: #00000095;
+}
+
+::-webkit-scrollbar-thumb{
+  background: rgb(64, 13, 193);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: rgb(85, 30, 225);
+}
+
+.first_page{
+  background-image: url('./assets/images/binary_code.gif');
+  background-repeat: repeat;
+  background-size: contain;
   min-height: 100vh;
+}
+
+.intro{
+  /* background-image: url('./assets/images/Day\'n\'Nite.gif');
+  background-repeat:no-repeat;
+  background-size:cover; */
+  background-color: beige;
+  background-image: url('./assets/images/Mario.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height:100vh;
+}
+
+.subTitle{
+  line-height: 1.2em;
+}
+
+.projects{
+  background-color: rgba(200, 200, 150, 0.4); 
+  min-height: 100vh;
+}
+
+.Kid_Cudi {
+  width: 75px;
+  height: 75px;
+  position: relative;
+  top: 20px;
+}
+
+.Kid_Cudi.one{
+  left: 5px;
+}
+
+.Kid_Cudi.two{
+  right: 5px;
+}
+
+.about{
+  background-color: lightgray; 
+  min-height: 100vh;
+}
+
+.about.content{
+  font-size: 18pt;
+  font-family: 'Press Start 2P';
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.about_pic{
+  width: 350px;
+  height: 350px;
+}
+
+.contact{
+  background-color: white; 
+  min-height: 35vh;
+}
+
+h2{
+  text-align: center;
+  vertical-align: 25%;
+  font-family: 'Sci-Fi';
+  font-size: 40pt;
+  line-height: 2em;
+  color: limegreen;
+}
+
+.container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: rgb(210, 210, 180, 0.4);
+  flex-flow: row wrap;
+  padding: 1em 2em 0 2em;
+  justify-content: space-around;
+  align-items: flex-end;
 }
 
-.App-link {
-  color: #61dafb;
+.item{
+  margin-bottom: 15px;
+  text-align:center;
+  text-decoration: none;
+  color: limegreen;
+  font-size: 20pt;
+  width: 10em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.item:hover .project-title{
+  animation: ProjectHover 10s linear infinite;
+}
+
+.item.one{
+  background-image: url('./assets/images/DiscordLogo.jpg');
+  background-size: contain;
+  background-color: #00000095;
+  background-repeat: no-repeat;
+  content: '';
+  height: 7em;
+}
+
+.item.two{
+  background-image: url('./assets/images/UbiWeather.jpg');
+  background-size: contain;
+  background-color: #00000095;
+  background-repeat: no-repeat;
+  content: '';
+  height: 8em;
+}
+
+.item.three{
+  background-image: url('./assets/images/binary_code.gif');
+  background-color:#00000095;
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: '';
+  width: 8em;
+  height: 7.4em;
+}
+
+.project-title{
+  background-color: rgba(128, 128, 128, 0.25);
+  position: relative;
+  right: 0;
+}
+
+.project-title.one{
+  width: 10em;
+  top: 153px;
+}
+
+.project-title.two{
+  width: 10em;
+  top: 180px;
+}
+
+.project-title.three{
+  width: 8em;
+  top: 163.5px;
+}
+
+@keyframes ProjectHover {
+  0%{
+      background-color: rgb(10, 100, 25);
   }
-  to {
-    transform: rotate(360deg);
+  25%{
+      background-color: rgb(75, 20, 215);
+  }
+  50%{
+      background-color: rgb(80, 10, 135)
+  }
+  75%{
+      background-color: rgb(20, 100, 215);
+  }
+  100%{
+      background-color: rgb(10, 100, 75);
+  }
+}
+
+.contact-text{
+  margin-top: 1em;
+  text-align: center;
+  font-family: 'Sci-Fi';
+  font-size: 18pt;
+}
+
+.contact-icons{
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  grid-gap: 20px;
+  list-style: none;
+  text-align: center;
+  line-height: 5em;
+  justify-content: center;
+}
+
+.contact-icons.git{
+  justify-content: end;
+  line-height: 2em;
+}
+
+.fa-linkedin{
+  font-size: 35px;
+  color:limegreen;
+  margin-top:1%;
+  margin-right: 2%;
+  text-shadow:1px 1px 2px #00000095;
+}
+
+.fa-linkedin:hover{
+  color:green;
+}
+
+.fa-envelope{
+  font-size: 35px;
+  color:limegreen;
+  margin-top:1%;
+  margin-right: 2%;
+  text-shadow:1px 1px 2px #00000095;
+}
+
+.fa-envelope:hover{
+  color:green;
+}
+
+.fa-github{
+  font-size: 35px;
+  color: limegreen;
+  margin-top:1%;
+  margin-right: 2%;
+  text-shadow:1px 1px 2px #00000095;
+}
+
+.fa-github:hover{
+  color:green;
+}
+
+@media screen and (max-width: 1390px){
+  .first_page{
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+
+  .intro{
+
+  }
+
+  .subTitle{
+      font-size: 18pt;
+  }
+}
+
+@media screen and (max-width: 930px){
+  .about_pic{
+      width:150px;
+      height: 150px;
+  }
+
+  .about.content{
+      font-size: 10pt;
+  }
+}
+
+@media screen and (min-height: 1120px) {
+  .first_page{
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  .about_pic{
+      width:150px;
+      height: 150px;
   }
 }

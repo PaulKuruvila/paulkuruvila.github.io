@@ -1,0 +1,14 @@
+h5 {
+    font-family: 'Press Start 2P';
+    font-size: 20pt;
+    color: limegreen;
+    position: relative;
+}
+
+.timebox{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
