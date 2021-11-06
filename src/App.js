@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import TimeButton from './components/TimeButton';
+import TimeButton from './components/TimeButton/TimeButton';
 import about_pic from './assets/images/Link_Cooking.gif';
 
 function App() {
