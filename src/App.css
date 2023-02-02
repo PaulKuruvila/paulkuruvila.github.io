@@ -51,13 +51,14 @@
   background-size:cover; */
   background-color: beige;
   background-image: url('./assets/images/Mario.gif');
-  background-size: contain;
+  background-size: 20%;
   background-repeat: no-repeat;
   background-position: center;
-  min-height:100vh;
+  min-height: 100vh;
 }
 
 .subTitle{
+  padding: 0.5em 0;
   line-height: 1.2em;
 }
 
@@ -90,17 +91,21 @@
   font-size: 18pt;
   font-family: 'Press Start 2P';
   text-align: center;
-  line-height: 1.5em;
+}
+
+.about.content p {
+  padding: 0 5rem 2rem;
+  line-height: 2em;
 }
 
 .about_pic{
   width: 350px;
   height: 350px;
+  margin-bottom: 0.5em;
 }
 
 .contact{
-  background-color: white; 
-  min-height: 35vh;
+  background-color: white;
 }
 
 h2{
@@ -110,6 +115,21 @@ h2{
   font-size: 40pt;
   line-height: 2em;
   color: limegreen;
+}
+
+.projects-title {
+  display: flex;
+  align-items: center;
+}
+
+.projects-title .subTitle { 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects-title .git {
+  /* margin-left: auto; */
+  margin-right: 2rem;
 }
 
 .container{
@@ -213,14 +233,10 @@ h2{
   grid-template-columns: repeat(2,auto);
   grid-gap: 20px;
   list-style: none;
+  margin-bottom: 1em;
   text-align: center;
   line-height: 5em;
   justify-content: center;
-}
-
-.contact-icons.git{
-  justify-content: end;
-  line-height: 2em;
 }
 
 .fa-linkedin{
@@ -269,7 +285,7 @@ h2{
 
   }
 
-  .subTitle{
+  .subTitle.long{
       font-size: 18pt;
   }
 }
