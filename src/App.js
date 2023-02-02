@@ -25,7 +25,7 @@ function App() {
           <a href="https://www.github.com/PaulKuruvila/Discord-Bot" target="_blank" rel="noopener noreferrer" className="item one">
             <header className="project-title one">Discord Bot</header>
           </a>
-          <a href="https://www.github.com/PaulKuruvila/UbiWeather-App" target="_blank" rel="noopener noreferrer" className="item two">
+          <a href="https://ubiweather.vercel.app/" target="_blank" rel="noopener noreferrer" className="item two">
             <header className="project-title two">UbiWeather App</header>
           </a>
           <a href="https://www.github.com/PaulKuruvila/GameReview-App" target="_blank" rel="noopener noreferrer" className="item three">
