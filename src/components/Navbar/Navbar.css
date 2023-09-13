@@ -13,7 +13,7 @@
     transition: all 0.3s;
 }
 
-.NavItems-hide{
+.NavItems-hide {
     visibility: hidden;
 }
 
@@ -34,22 +34,7 @@
     margin-left: 20px;
 }
 
-
-.scroll-page{
-    display: none;
-    position: fixed;
-    content: '';
-    background-image: url('/src/assets/images/loading_LoZ.gif');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 64px;
-    height: 64px;
-    bottom:0;
-    right: 0;
-    transform: translate(-50%,-50%);   
-}
-
-.TitleGif{
+.TitleGif {
     cursor: help;
     content:'';
     background-image: url('/src/assets/images/Link_LoZ.gif');
@@ -84,20 +69,20 @@
     }
 }
 
-.TitleText:hover{
+.TitleText:hover {
     color: rgb(200, 235, 200);
     font-size: 31pt;
     font-weight:bolder;
     cursor: pointer;
 }
 
-.DropdownMenu{
+.DropdownMenu {
     display:none;
     font-size: 1.8rem;
     cursor:pointer;
 }
 
-.DropdownMenu:hover{
+.DropdownMenu:hover {
     font-size: 1.81rem;
 }
 
@@ -121,7 +106,7 @@
     scroll-behavior: smooth;
 }
 
-.nav-links:hover{
+.nav-links:hover {
     background-color: limegreen;
     font-size: 11pt;
     color:black;
@@ -133,38 +118,38 @@
     color:limegreen;
 }
 
-.fa-bars:hover{
+.fa-bars:hover {
     color: green;
 }
 
-.fa-times{
+.fa-times {
     color: limegreen;
 }
 
-.fa-times:hover{
+.fa-times:hover {
     color: green;
 }
 
-@media screen and (max-width: 930px){
-    .nav-links{
+@media screen and (max-width: 930px) {
+    .nav-links {
         display: table;
         text-align: center;
         padding: 1rem;
-        width:100%;
+        width: 100%;
     }
 
-    .nav-links:hover{
+    .nav-links:hover {
         background-color: limegreen;
         color: black;
         border-radius: 0;
     }
 
-    .NavItems{
+    .NavItems {
         justify-content: start;
         position: fixed;
     }
 
-    .NavMenu{
+    .NavMenu {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -175,23 +160,23 @@
         visibility: hidden;
     }
 
-    .NavMenu.active{
+    .NavMenu.active {
         background-color: rgb(85, 30, 225);
-        top:100%;
+        top: 100%;
         opacity: 1;
         transition: all 0.5s ease;
         visibility: visible;
         z-index: 1;
     }
 
-    .DropdownMenu{
+    .DropdownMenu {
         display: block;
         position: absolute;
-        top:32%;
+        top: 32%;
         right: 5%;   
     }
 
-    .TitleGif{
+    .TitleGif {
         height: 50px;
         width: 50px;
         margin-left: 5%;

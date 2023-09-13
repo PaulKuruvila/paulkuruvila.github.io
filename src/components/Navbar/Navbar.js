@@ -21,14 +21,21 @@ class Navbar extends Component {
     }
     handleScroll = () => {
         this.setState({
-            lastScrollPos: document.body.getBoundingClientRect().top,
-            scrollPos: document.getElementById("intro").getBoundingClientRect().top,
-            show: this.state.scrollPos > 25, //|| document.body.getBoundingClientRect().top > this.state.lastScrollPos
+            scrollPos: document.getElementById("intro").getBoundingClientRect().top
         });
-        if(this.state.scrollPos < 25 && this.state.clicked){
+        
+        if(this.state.scrollPos < 25) {
+            console.log('hide the navbar');
             this.setState({
-                clicked: false
+                show: false
             });
+            this.props.toggleScrollyDisplay(true);
+        } else {
+            console.log('show navbar', this.scrollPos);
+            this.setState({
+                show: true
+            });
+            this.props.toggleScrollyDisplay(false);
         }
     }
 
@@ -38,8 +45,7 @@ class Navbar extends Component {
     
     optionClicked = () => {
         this.setState({show: false, clicked: false});
-        // let loading_img = document.getElementById('scrolly');
-        // window.setTimeout(loading_img.style.display = 'block', 3000);
+        this.props.toggleScrollyDisplay(false);
     }
 
     LoZLink = () => {
@@ -56,7 +62,6 @@ class Navbar extends Component {
         console.log(this.state);
         return(
             <nav className={this.state.show ? "NavItems" : "NavItems-hide"}>
-                <div id="scrolly" className='scroll-page'></div>
                 <div className="Title">
                     <div className="TitleGif" onClick={this.LoZLink}></div>
                     <h1 className="TitleText" onClick={this.Homepage}>Paul Kuruvila</h1>

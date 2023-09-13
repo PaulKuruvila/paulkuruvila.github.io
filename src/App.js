@@ -2,11 +2,15 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import TimeButton from './components/TimeButton/TimeButton';
 import about_pic from './assets/images/Link_Cooking.gif';
+import { useState } from 'react';
 
 function App() {
+  const [scrollyDisplay, toggleScrollyDisplay] = useState(false);
+
   return (
     <div className="App">
-      < Navbar/>
+      < Navbar scrollyDisplay={scrollyDisplay} toggleScrollyDisplay={scrollyDisplay => toggleScrollyDisplay(scrollyDisplay)}/>
+      <a id="scrolly" href='#' className={scrollyDisplay ? 'scroll-page show' : 'scroll-page'}><p>Back to Top</p></a>
       <div id="" className="first_page">
         < TimeButton />
       </div>
