@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.f7fdc1d8.css",
+    "main.css": "/static/css/main.cff54633.css",
     "main.js": "/static/js/main.c906a1bc.js",
     "static/media/binary_code.gif": "/static/media/binary_code.87aa15254192edb16d3a.gif",
     "static/media/Link_LoZ.gif": "/static/media/Link_LoZ.f2a3cc599e05c5730cbf.gif",
@@ -11,11 +11,11 @@
     "static/media/JlsspacegothicRnc-n2zY.otf": "/static/media/JlsspacegothicRnc-n2zY.5123d263d2a19d711bff.otf",
     "static/media/DiscordLogo.jpg": "/static/media/DiscordLogo.d83b41a735f61193984f.jpg",
     "index.html": "/index.html",
-    "main.f7fdc1d8.css.map": "/static/css/main.f7fdc1d8.css.map",
+    "main.cff54633.css.map": "/static/css/main.cff54633.css.map",
     "main.c906a1bc.js.map": "/static/js/main.c906a1bc.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7fdc1d8.css",
+    "static/css/main.cff54633.css",
     "static/js/main.c906a1bc.js"
   ]
 }
