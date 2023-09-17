@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { NavItems } from "./NavItems";
+import { Howl } from 'howler';
+import buttonSFX from '../../assets/soundfx/button_pressed.mp3';
+import musicTheme from '../../assets/soundfx/experiment1.mp3';
 import './Navbar.css';
 
 class Navbar extends Component {
@@ -13,8 +16,30 @@ class Navbar extends Component {
         };
     }
 
+    bkgMusic = new Howl({
+        src: musicTheme,
+        volume: 0.1,
+        loop: true,
+    });
+
+    bkgMusicId = this.bkgMusic.play();
+
     componentDidMount() {
         window.addEventListener("scroll", this.handleScroll);
+        document.addEventListener("visibilitychange", () => {
+            if(document.hidden) {
+                // console.log('user tabbed out');
+                if(this.bkgMusic.playing(this.bkgMusicId)) {
+                    // console.log('music was playing and now we are attempting to mute...');
+                    this.bkgMusic.volume(0, this.bkgMusicId); // mute does not seem to work (tested on chrome)
+                }
+            } else {
+                if(this.bkgMusic.volume(this.bkgMusicId) == 0) {
+                    // console.log('user is locked in and now we are attempting to unmute...');
+                    this.bkgMusic.volume(0.1, this.bkgMusicId);
+                }
+            }
+        });
     }
     componentWillUnmount() {
         window.removeEventListener("scroll", this.handleScroll);
@@ -25,13 +50,11 @@ class Navbar extends Component {
         });
         
         if(this.state.scrollPos < 25) {
-            console.log('hide the navbar');
             this.setState({
                 show: false
             });
             this.props.toggleScrollyDisplay(true);
         } else {
-            console.log('show navbar', this.scrollPos);
             this.setState({
                 show: true
             });
@@ -43,14 +66,17 @@ class Navbar extends Component {
         this.setState({clicked: !this.state.clicked});
     }
     
-    optionClicked = () => {
+    navOptionClicked = () => {
         this.setState({show: false, clicked: false});
         this.props.toggleScrollyDisplay(false);
+        var sound = new Howl({
+            src: buttonSFX,
+            volume: 0.5
+        }).play();
     }
 
     LoZLink = () => {
         window.open("https://www.zelda.com/");
-            //ADD BUTTON SOUNDS FOR ALL BUTTONS
     }
 
     Homepage = () => {
@@ -59,7 +85,6 @@ class Navbar extends Component {
     
 
     render(){
-        console.log(this.state);
         return(
             <nav className={this.state.show ? "NavItems" : "NavItems-hide"}>
                 <div className="Title">
@@ -73,7 +98,7 @@ class Navbar extends Component {
                     {NavItems.map((item,index) => {
                         return(
                             <li key={index}>
-                                <a className={item.class} href={item.link} onClick={this.optionClicked}>
+                                <a className={item.class} href={item.link} onClick={this.navOptionClicked}>
                                     {item.label} 
                                 </a>
                             </li>

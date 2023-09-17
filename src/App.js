@@ -22,7 +22,7 @@ function App() {
         <div className='projects-title'>
           <h2 className="subTitle">Projects</h2>
           <div className="git">
-            <a onmousedown="optionClicked()" href="https://www.github.com/PaulKuruvila" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+            <a href="https://www.github.com/PaulKuruvila" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
           </div>
         </div>        
         <div className="container">
@@ -49,8 +49,8 @@ function App() {
         <h2 className="subTitle">Contact</h2>
         <p className="contact-text">You can contact me via:</p>
         <div className="contact-icons">
-          <a onmousedown="optionClicked()" href="https://www.linkedin.com/in/paulkuruvila" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-          <a onmousedown="optionClicked()" href="mailto:paulrkuruvila@gmail.com"><i className="fa fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/paulkuruvila" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+          <a href="mailto:paulrkuruvila@gmail.com"><i className="fa fa-envelope"></i></a>
         </div>
       </div>
     </div>
