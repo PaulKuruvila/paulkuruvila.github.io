@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.cff54633.css",
-    "main.js": "/static/js/main.c906a1bc.js",
+    "main.js": "/static/js/main.b9f692b1.js",
+    "static/media/experiment1.mp3": "/static/media/experiment1.1e82f5e31233abb03876.mp3",
     "static/media/binary_code.gif": "/static/media/binary_code.87aa15254192edb16d3a.gif",
     "static/media/Link_LoZ.gif": "/static/media/Link_LoZ.f2a3cc599e05c5730cbf.gif",
     "static/media/Link_Cooking.gif": "/static/media/Link_Cooking.31673b35ed5d79a97c0e.gif",
@@ -10,12 +11,13 @@
     "static/media/Mario.gif": "/static/media/Mario.d4c5c9ab1c7a858c0900.gif",
     "static/media/JlsspacegothicRnc-n2zY.otf": "/static/media/JlsspacegothicRnc-n2zY.5123d263d2a19d711bff.otf",
     "static/media/DiscordLogo.jpg": "/static/media/DiscordLogo.d83b41a735f61193984f.jpg",
+    "static/media/button_pressed.mp3": "/static/media/button_pressed.8ad8a60347643db8939d.mp3",
     "index.html": "/index.html",
     "main.cff54633.css.map": "/static/css/main.cff54633.css.map",
-    "main.c906a1bc.js.map": "/static/js/main.c906a1bc.js.map"
+    "main.b9f692b1.js.map": "/static/js/main.b9f692b1.js.map"
   },
   "entrypoints": [
     "static/css/main.cff54633.css",
-    "static/js/main.c906a1bc.js"
+    "static/js/main.b9f692b1.js"
   ]
 }
