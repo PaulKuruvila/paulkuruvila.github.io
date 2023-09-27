@@ -111,7 +111,6 @@ nav #nav-options li a:focus-visible {
   color: var(--text);
   background-color: var(--background);
   min-height: 85vh;
-  padding-top: 15vh;
   padding: 15vh 100px 0;
 }
 
