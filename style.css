@@ -20,6 +20,7 @@ body {
   background-color: var(--background);
 }
 
+/* Navbar */
 nav {
   display: flex;
   position: fixed;
@@ -104,6 +105,7 @@ nav #nav-options li a:focus-visible {
   color: var(--interact);
 }
 
+/* Sections */
 .section {
   display: flex;
   flex-direction: column;
@@ -111,7 +113,7 @@ nav #nav-options li a:focus-visible {
   color: var(--text);
   background-color: var(--background);
   min-height: 85vh;
-  padding: 15vh 100px 0;
+  padding: 15vh 15% 0;
 }
 
 .section h1::before, .section h1::after {
@@ -138,8 +140,51 @@ nav #nav-options li a:focus-visible {
 
 .section p {
   font-size: 2rem;
+  text-align: center;
 }
 
+/* Projects section */
+.project {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 2px solid black;
+  height: 256px;
+  width: 256px;
+}
+
+.project img {
+  background-color: var(--nav);
+  object-fit: cover;
+  width: 256px;
+  height: 186px;
+}
+
+.project button {
+  font-size: 1.5rem;
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background-color: var(--text);
+  color: var(--background);
+}
+
+.project button:hover {
+  background-color: var(--interact);
+}
+
+.project button.details {
+  bottom: 0px;
+}
+
+.project button.view {
+  bottom: 38px;
+}
+
+/* Contact section */
 #contact.section {
   padding: 10vh;
   min-height: 0px;
