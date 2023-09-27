@@ -105,6 +105,62 @@ nav #nav-options li a:focus-visible {
   color: var(--interact);
 }
 
+/* Modal backdrop */
+#modal-backdrop {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  z-index: 999;
+}
+
+#modal-backdrop #project-close-btn {
+  cursor: pointer;
+  position: fixed;
+  top: 55%;
+  right: 5%;
+  width: 48px;
+  height: 48px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid var(--interact);
+  background-color: var(--nav);
+  color: var(--text);
+  overflow: hidden;
+}
+
+#modal-backdrop #project-close-btn i {
+  font-size: 2.5rem;
+}
+
+#project-site-btn {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  right: 5%;
+  border-radius: 5px;
+  outline: none;
+  padding: 0 1rem;
+  border: 2px solid var(--interact);
+  font-size: 2rem;
+  background-color: var(--nav);
+  color: var(--text);
+}
+
+#modal-backdrop #project-close-btn:hover, #project-site-btn:hover {
+  background-color: var(--interact);
+}
+
+#project-embed {
+  display: none;
+  margin: 10% auto 0;
+  width: 400px;
+  height: 400px;
+}
+
 /* Sections */
 .section {
   display: flex;
@@ -136,6 +192,13 @@ nav #nav-options li a:focus-visible {
 .section h1 {
   font-size: 3rem;
   color: var(--subtitle);
+  margin-bottom: -1rem;
+  text-shadow: 2px 1px 2px lawngreen;
+}
+
+.section h2 {
+  font-size: 2.3rem;
+  text-align: center;
 }
 
 .section p {
@@ -143,7 +206,24 @@ nav #nav-options li a:focus-visible {
   text-align: center;
 }
 
+/* Intro section */
+#intro img {
+  height: 192px;
+  width: 192px;
+  background-color: var(--nav);
+}
+
 /* Projects section */
+.projects-container {
+  --num-cols: 3;
+  box-sizing: border-box;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(var(--num-cols),1fr);
+  overflow: hidden;
+  padding: 1rem;
+}
+
 .project {
   position: relative;
   display: flex;
@@ -153,6 +233,19 @@ nav #nav-options li a:focus-visible {
   border: 2px solid black;
   height: 256px;
   width: 256px;
+}
+
+.project label {
+  position: absolute;
+  text-align: center;
+  text-indent: -15px;
+  color: var(--nav);
+  background-color: var(--title);
+  width: 80%;
+  font-size: 1.5rem;
+  transform: rotate(-26deg);
+  top: 11px;
+  left: -36px;
 }
 
 .project img {
@@ -181,7 +274,9 @@ nav #nav-options li a:focus-visible {
 }
 
 .project button.view {
-  bottom: 38px;
+  bottom: 34px;
+  border-top: 1px solid var(--nav);
+  border-bottom: 1px solid var(--nav);
 }
 
 /* Contact section */
@@ -203,4 +298,16 @@ nav #nav-options li a:focus-visible {
 
 #ct-icons i:hover {
   color: var(--interact);
+}
+
+@media screen and (max-width: 1024px) {
+  .projects-container {
+    --num-cols: 2;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .projects-container {
+    --num-cols: 1;
+  }
 }

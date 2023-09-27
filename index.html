@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./script.js"></script>
   <script src="https://kit.fontawesome.com/5f6d378910.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css" />
   <title>Paul Kuruvila | Computer Science</title>
@@ -18,10 +19,16 @@
       <li><a href="#contact">Contact</a></li>
     </div>
   </nav>
+  <div id="modal-backdrop">
+    <iframe id="project-embed" src="" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <button id="project-site-btn" onclick="viewSite(document.getElementById('project-embed').getAttribute('src'))">View on site</button>
+    <button id="project-close-btn" onclick="closeModal()"><i class="fas fa-times" aria-hidden="true"></i></button>
+  </div>
   <div class="section" id="intro" href="#intro">
     <h1>Intro</h1>
-    <p>Hey there, and welcome to my portfolio page!
-      <br/>My name is Paul Kuruvila, and I am a computer software engineer with aspirations to be
+    <h2>Hey there, and welcome to my portfolio page!</h2>
+    <img src="" alt="candid"/>
+    <p>My name is Paul Kuruvila, and I am a computer software engineer with aspirations to be
        employed as a full stack developer. I am very passionate about programming and enjoy 
        working on various projects to further my knowledge. On this page, you can learn more
        about me and view some of the different projects and apps I've worked on!
@@ -29,16 +36,30 @@
   </div>
   <div class="section" id="projects" href="#projects">
     <h1>Projects</h1>
-    <p>Below are some of the projects I've worked on; feel free to check them out!
-   </p>
-   <div class="project">
-    <img alt="project1" />
-    <button class="details">View Details</button>
-    <button class="view">View Project</button>
-   </div>
+    <h2>Below are some of the projects I've worked on;<br />feel free to check them out!</h2>
+  <div class="projects-container">
+    <div class="project">
+      <label>UbiWeather</label>
+      <img src="images/ubiweather.png" alt="ubiweather" />
+      <button class="details" onclick="viewProject('details')">View Details</button>
+      <button class="view" onclick="viewProject('embed', true, 'https://ubiweather.vercel.app', 'UbiWeather App')">View Project</button>
+    </div>
+    <div class="project">
+      <label>Project 2</label>
+      <img src="" alt="project2" />
+      <button class="details" onclick="viewProject('details')">View Details</button>
+      <button class="view" onclick="viewProject('embed')">View Project</button>
+    </div>
+    <div class="project">
+      <label>Project 3</label>
+      <img src="" alt="project3" />
+      <button class="details" onclick="viewProject('details')">View Details</button>
+      <button class="view" onclick="viewProject('embed')">View Project</button>
+    </div>
+  </div>
   </div>
   <div class="section" id="about" href="#about">
-    <h1>About</h1>
+    <h1>About Me</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
       ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
       ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
