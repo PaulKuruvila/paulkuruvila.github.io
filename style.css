@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
+:root {
+  --background: #ffffffe6;
+  --nav: #c3d9c3;
+  --interact: seagreen;
+  --title: #008080;
+  --subtitle: #4B0082;
+  --text: #333333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Dongle';
+  scroll-behavior: smooth;  
+}
+
+body {
+  background-color: var(--background);
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  list-style: none;
+  align-items: center;
+  padding: 0.5rem 0;
+  background-color: var(--nav);
+  box-shadow: 0px 0px 3px black;
+  z-index: 9999;
+}
+
+nav * {
+  text-decoration: none;
+  white-space: nowrap;
+  outline: none;
+}
+
+nav #nav-title a:focus-visible {
+  border-left: 2px solid var(--interact);
+  border-right: 2px solid var(--interact);
+}
+
+nav #nav-options li a:focus-visible {
+  border: 2px solid var(--interact);
+}
+
+#nav-title {
+  position: relative;
+  top: 3px;
+  cursor: pointer;
+  font-size: 3rem;
+  margin-right: auto;
+  margin-left: 10%;
+  overflow: hidden;
+}
+
+#nav-title a {
+  color: var(--title);
+}
+
+#nav-title:hover::after {
+  left: 0;
+}
+
+#nav-title::after {
+  display: block;
+  content: '';
+  height: 2px;
+  background-color: var(--subtitle);
+  position: relative;
+  top: -25px;
+  left: -185px;
+  transition: left ease-in 0.2s;
+}
+
+#nav-options {
+  display: flex;
+  font-size: 1.75rem;
+  margin-right: 10%;
+}
+
+#nav-options li a {
+  color: var(--text);
+  background-color: var(--background);
+  padding: 0.75rem;
+}
+
+#nav-options li:first-child > a {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-left: 1.25rem;
+}
+
+#nav-options li:last-child > a {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-right: 1.25rem;
+}
+
+#nav-options li:hover a {
+  color: var(--interact);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text);
+  background-color: var(--background);
+  min-height: 85vh;
+  padding-top: 15vh;
+  padding: 15vh 100px 0;
+}
+
+.section h1::before, .section h1::after {
+  content: '///';
+  color: lawngreen;
+  text-shadow: 2px 2px 2px var(--text);
+  font-size: 5rem;
+  position: relative;
+  top: 5px;
+}
+
+.section h1::before {
+  padding-right: 1rem;
+}
+
+.section h1::after {
+  padding-left: 1rem;
+}
+
+.section h1 {
+  font-size: 3rem;
+  color: var(--subtitle);
+}
+
+.section p {
+  font-size: 2rem;
+}
+
+#contact.section {
+  padding: 10vh;
+  min-height: 0px;
+}
+
+#ct-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+#ct-icons i {
+  font-size: 2rem;
+  color: var(--title);
+  text-shadow: 1px 1px 1px var(--subtitle);
+}
+
+#ct-icons i:hover {
+  color: var(--interact);
+}
