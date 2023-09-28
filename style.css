@@ -278,7 +278,7 @@ nav #nav-options li a:focus-visible {
 .project label {
   position: absolute;
   text-align: center;
-  text-indent: -15px;
+  text-indent: -50px;
   color: var(--nav);
   background-color: var(--title);
   width: 80%;
@@ -286,6 +286,7 @@ nav #nav-options li a:focus-visible {
   transform: rotate(-26deg);
   top: 11px;
   left: -36px;
+  padding: 0px 25px;
 }
 
 .project img {
@@ -293,6 +294,12 @@ nav #nav-options li a:focus-visible {
   object-fit: cover;
   width: 256px;
   height: 186px;
+}
+
+/* Styling for SkyAware Anywhere project image */
+#skyaware {
+  background: var(--nav) url('images/skyaware.svg') repeat-y center;
+  background-size: 200px;
 }
 
 .project button {

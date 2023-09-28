@@ -44,23 +44,22 @@ const viewSite = (link) => {
   window.open(link, '_blank');
 };
 
-const viewProject = (aspect, hasExternalLink, embed_link, embed_title) => {
-  console.log(`View ${aspect} button was pressed.`);
-  openModal();
+const viewProject = (aspect, hasExternalLink, link, embed_title) => {
   if(aspect === 'details') {
-    console.log('Show project details');
+    openModal();
     return;
   } else if(aspect === 'embed') {
+    openModal();
     document.getElementById('project-embed').style.display = 'block';
     if(hasExternalLink) {
-      document.getElementById('project-embed').setAttribute('src', embed_link);
+      document.getElementById('project-embed').setAttribute('src', link);
       document.getElementById('project-embed').setAttribute('title', embed_title);
       document.getElementById('project-site-btn').style.display = 'block';
       document.getElementById('project-close-btn').style.top = '60%';
     }
     return;
   } else if(aspect === 'redirect') {
-    console.log('Show project in redirect link');
+    window.open(link,'_blank');
     return;
   } else {
     console.log('Unexpected parameter received: check for any typos');
