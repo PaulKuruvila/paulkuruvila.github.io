@@ -206,7 +206,7 @@ nav #nav-options li a:focus-visible {
   color: var(--text);
   background-color: var(--background);
   min-height: 85vh;
-  padding: 15vh 15% 0;
+  padding: 5rem 15% 0;
 }
 
 .section h1::before, .section h1::after {
@@ -382,7 +382,7 @@ nav #nav-options li a:focus-visible {
   }
 
   #intro.section {
-    padding-top: 5rem;
+    padding-top: 7rem;
   }
 
   .section h2, .section p {
@@ -414,6 +414,6 @@ nav #nav-options li a:focus-visible {
   }
 
   #intro.section {
-    padding-top: 1rem;
+    padding-top: 2rem;
   }
 }
