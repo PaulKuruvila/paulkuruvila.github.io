@@ -88,6 +88,7 @@ nav #nav-options li a:focus-visible {
 #nav-dropdown i {
   cursor: pointer;
   color: var(--subtitle);
+  font-size: 1.5rem;
 }
 
 #nav-dropdown i:hover {
@@ -97,8 +98,8 @@ nav #nav-options li a:focus-visible {
 #nav-dropdown i.fa-times {
   display: none;
   position: relative;
-  top: -14px;
-  right: 1px;
+  top: -21px;
+  right: 2px;
 }
 
 #nav-options {
@@ -356,6 +357,7 @@ nav #nav-options li a:focus-visible {
 @media screen and (max-width: 700px) {
   nav {
     flex-direction: column;
+    padding: 1rem 0;
   }
 
   #nav-title {
@@ -371,12 +373,12 @@ nav #nav-options li a:focus-visible {
   #nav-options {
     display: flex;
     margin: 0px;
-    padding: 0.5rem;
+    padding: 1.7rem 0 0.7rem;
   }
 
   #nav-options li a {
-    font-size: 1.2rem;
-    padding: 0.4rem;
+    font-size: 1.8rem;
+    padding: 0.8rem;
   }
 
   #intro.section {
