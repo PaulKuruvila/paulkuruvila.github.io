@@ -247,6 +247,7 @@ nav #nav-options li a:focus-visible {
 #intro img {
   height: 192px;
   width: 192px;
+  margin: 20px 0;
   background-color: var(--nav);
   border-radius: 10px;
   box-shadow: 2px 2px 3px var(--text);
@@ -383,6 +384,10 @@ nav #nav-options li a:focus-visible {
 @media screen and (max-width: 640px) {
   .projects-container {
     --num-cols: 1;
+  }
+
+  .section {
+    padding: 15vh 7.5% 0;
   }
 }
 
