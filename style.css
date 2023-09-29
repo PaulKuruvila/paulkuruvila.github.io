@@ -205,7 +205,6 @@ nav #nav-options li a:focus-visible {
   align-items: center;
   color: var(--text);
   background-color: var(--background);
-  min-height: 85vh;
   padding: 5rem 15% 0;
 }
 
@@ -334,7 +333,7 @@ nav #nav-options li a:focus-visible {
 
 /* Styling for SkyAware Anywhere project image */
 #skyaware {
-  background: var(--nav) url('images/skyaware.svg') repeat-y center;
+  background: var(--nav) url('assets/images/skyaware.svg') repeat-y center;
   background-size: 200px;
 }
 
@@ -386,7 +385,7 @@ nav #nav-options li a:focus-visible {
 
 /* Contact section */
 #contact.section {
-  padding: 10vh;
+  padding: 10vh 10vh 5vh;
   min-height: 0px;
 }
 
@@ -405,6 +404,35 @@ nav #nav-options li a:focus-visible {
   color: var(--interact);
 }
 
+#footer {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  width: min-content;
+  margin: 1rem auto 0;
+  padding: 1rem;
+  color: var(--text);
+  border-top: 2px solid var(--nav);
+}
+
+#footer p {
+  width: 35vw;
+  text-align: center;
+}
+
+#footer a {
+  color: var(--text);
+  font-weight: bold;
+  text-decoration: underline solid var(--subtitle);
+  white-space: nowrap;
+}
+
+#footer a:hover {
+  cursor: pointer;
+  color: var(--interact);
+}
+
+/* Media queries */
 @media screen and (max-width: 1024px) {
   .projects-container {
     --num-cols: 2;
@@ -444,6 +472,11 @@ nav #nav-options li a:focus-visible {
 
   .section h2, .section p {
     line-height: 2.3rem;
+  }
+
+  #footer p {
+    line-height: 1.3rem;
+    width: 50vw;
   }
 }
 
