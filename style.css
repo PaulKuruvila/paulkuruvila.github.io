@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
 
 :root {
-  --background: #ffffffe6;
+  --background: #ffffff;
   --nav: #c3d9c3;
   --interact: seagreen;
   --title: #008080;
@@ -280,12 +280,48 @@ nav #nav-options li a:focus-visible {
 
 /* Intro section */
 #intro img {
-  height: 192px;
-  width: 192px;
+  position: relative;
+  top: -50px;
+  height: 192px; /* 192px */
+  width: 192px; /* 192px */
   margin: 20px 0;
-  background-color: var(--nav);
+  background-color: var(--background);
   border-radius: 10px;
-  box-shadow: 2px 2px 3px var(--text);
+  /* box-shadow: 2px 2px 3px var(--text); */ /* Uncomment out when I have an actual candid photo */
+}
+
+/* Remove all below in intro section once I have replacement image */
+#intro h2, #intro p {
+  z-index: 3;
+}
+
+#intro #cover-up {
+  position: relative;
+  top: -270px;
+  left: 70px;
+  display: block;
+  background-color: var(--background);
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+  margin-bottom: -150px;
+}
+
+#intro #let {
+  position: absolute;
+  font-size: 2rem;
+  color: red;
+  z-index: 1;
+  transform: rotate(-45deg);
+  top: 45px;
+  left: -110px;
+}
+
+#intro #him {
+  position: absolute;
+  top: 75px;
+  left: 75px;
+  transform: rotate(90deg);
 }
 
 /* Projects section */
