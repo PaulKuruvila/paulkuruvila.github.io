@@ -239,6 +239,41 @@ nav #nav-options li a:focus-visible {
   text-align: center;
 }
 
+.section h3 {
+  font-size: 2.3rem;
+  cursor: pointer;
+}
+
+.section h3::before, .section h3::after {
+  position: relative;
+  color: var(--interact);
+  transition: all ease-in 0.2s;
+}
+
+.section h3::before {
+  content: '>';
+  right: 20px;
+}
+
+.section h3::after {
+  content: '<';
+  left: 20px;
+}
+
+.section h3:hover {
+  color: var(--interact);
+}
+
+.section h3:hover::before {
+  right: 10px;
+  color: var(--text);
+}
+
+.section h3:hover::after {
+  left: 10px;
+  color: var(--text);
+}
+
 .section p {
   font-size: 2rem;
   text-align: center;
@@ -327,6 +362,28 @@ nav #nav-options li a:focus-visible {
   border-bottom: 1px solid var(--nav);
 }
 
+/* About Me section */
+#about.section h2 {
+  position: relative;
+  top: 30px;
+  left: -50%;
+  transform: rotate(-20deg);
+  margin-bottom: 2.5rem;
+}
+
+#about.section h2::after {
+  content: '';
+  display: block;
+  position: relative;
+  top: -12px;
+  height: 3px;
+  background-color: var(--title);
+}
+
+#about.section h2#experience {
+  left: -24%;
+}
+
 /* Contact section */
 #contact.section {
   padding: 10vh;
@@ -398,6 +455,14 @@ nav #nav-options li a:focus-visible {
   .section {
     padding: 15vh 7.5% 0;
   }
+
+  #about.section h2 {
+    left: -45%;
+  }
+
+  #about.section h2#experience {
+    left: -24%;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -415,5 +480,13 @@ nav #nav-options li a:focus-visible {
 
   #intro.section {
     padding-top: 2rem;
+  }
+
+  #about.section h2 {
+    left: -36%;
+  }
+
+  #about.section h2#experience {
+    left: -28%;
   }
 }
