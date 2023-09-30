@@ -361,6 +361,41 @@ nav #nav-options li a:focus-visible {
   display: block;
 }
 
+.project .details-container.show-details button.details {
+  background-color: var(--interact);
+}
+
+.project .details-container.show-details button.details::before {
+  transform: rotate(90deg);
+}
+
+.project .details-container.show-details button.details::after {
+  transform: rotate(-90deg);
+}
+
+.project button.details:hover::before {
+  transform: rotate(-90deg);
+}
+
+.project button.details:hover::after {
+  transform: rotate(90deg);
+}
+
+.project button.details::before, .project button.details::after {
+  display: inline-block;
+  position: relative;
+  right: 20px;
+  content: '>';
+  transition: all ease-in 0.2s;
+}
+
+.project button.details::after {
+  right: -20px;
+  content: '<';
+}
+
+/* .project button */
+
 .project button:hover {
   background-color: var(--interact);
 }
