@@ -208,28 +208,11 @@ nav #nav-options li a:focus-visible {
   padding: 5rem 15% 0;
 }
 
-.section h1::before, .section h1::after {
-  content: '///';
-  color: lawngreen;
-  text-shadow: 2px 2px 2px var(--text);
-  font-size: 5rem;
-  position: relative;
-  top: 5px;
-}
-
-.section h1::before {
-  padding-right: 1rem;
-}
-
-.section h1::after {
-  padding-left: 1rem;
-}
-
 .section h1 {
   font-size: 3rem;
   color: var(--subtitle);
   margin-bottom: -1rem;
-  text-shadow: 2px 1px 2px lawngreen;
+  padding-bottom: 1rem;
   white-space: nowrap;
 }
 
@@ -238,47 +221,16 @@ nav #nav-options li a:focus-visible {
   text-align: center;
 }
 
-.section h3 {
-  font-size: 2.3rem;
-  cursor: pointer;
-}
-
-.section h3::before, .section h3::after {
-  position: relative;
-  color: var(--interact);
-  transition: all ease-in 0.2s;
-}
-
-.section h3::before {
-  content: '>';
-  right: 20px;
-}
-
-.section h3::after {
-  content: '<';
-  left: 20px;
-}
-
-.section h3:hover {
-  color: var(--interact);
-}
-
-.section h3:hover::before {
-  right: 10px;
-  color: var(--text);
-}
-
-.section h3:hover::after {
-  left: 10px;
-  color: var(--text);
-}
-
 .section p {
   font-size: 2rem;
   text-align: center;
 }
 
 /* Intro section */
+#intro.section {
+  padding-top: 6.5rem;
+}
+
 #intro img {
   position: relative;
   top: -50px;
@@ -424,6 +376,45 @@ nav #nav-options li a:focus-visible {
   width: 100px;
 }
 
+.section h3 {
+  font-size: 2.3rem;
+  cursor: pointer;
+}
+
+.section h3::before, .section h3::after {
+  position: relative;
+  color: var(--interact);
+  transition: all ease-in 0.2s;
+}
+
+.section h3::before {
+  content: '>';
+  right: 20px;
+}
+
+.section h3::after {
+  content: '<';
+  left: 20px;
+}
+
+.section h3:hover {
+  color: var(--interact);
+}
+
+.section h3:hover::before {
+  right: 10px;
+  color: var(--text);
+}
+
+.section h3:hover::after {
+  left: 10px;
+  color: var(--text);
+}
+
+.we-open::after {
+  
+}
+
 /* Contact section */
 #contact.section {
   padding: 10vh 10vh 5vh;
@@ -508,7 +499,7 @@ nav #nav-options li a:focus-visible {
   }
 
   #intro.section {
-    padding-top: 7rem;
+    padding-top: 9rem;
   }
 
   .section h2, .section p {
@@ -553,7 +544,7 @@ nav #nav-options li a:focus-visible {
   }
 
   #intro.section {
-    padding-top: 2rem;
+    padding-top: 4rem;
   }
 
   #about.section h2 {

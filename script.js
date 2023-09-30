@@ -1,5 +1,7 @@
 let dropdownElements = [];
 let previousWindowWidth = 0;
+let navOpenIntroPadding = '9rem';
+let navClosedIntroPadding = '4rem';
 
 addEventListener("resize", (e) => {
   if(window.innerWidth > 480 && dropdownElements.length > 0) { // if dropdown hidden, but it has been pressed before
@@ -11,18 +13,20 @@ addEventListener("resize", (e) => {
     }
     // Adjust padding on intro section to fall under navbar with resizing changes
     if(window.innerWidth > 700) {
-      dropdownElements[3].style['padding-top'] = '5rem';
+      dropdownElements[3].style['padding-top'] = '6.5rem';
     } else if(dropdownElements[1].style['display'] === 'none') {
-      dropdownElements[3].style['padding-top'] = '7rem';
+      dropdownElements[3].style['padding-top'] = navOpenIntroPadding;
     }
   } else if (dropdownElements.length > 0) { // if we are mobile, and dropdown has been pressed before
-    if(dropdownElements[2].style['display'] === 'flex' && previousWindowWidth > 480) { // if dropdown was previously hidden
-      // hide navbar options again
-      dropdownElements[2].style['display'] = 'none';
-    }
-    // Adjust padding on intro section to fall under navbar with resizing changes pt. 2
-    if(dropdownElements[3].style['padding-top'] === '7rem') {
-      dropdownElements[3].style['padding-top'] = '2rem';
+    if(previousWindowWidth > 480) { // if dropdown was previously hidden
+      if(dropdownElements[2].style['display'] === 'flex'){
+        // hide navbar options again
+        dropdownElements[2].style['display'] = 'none';
+      }
+      // Adjust padding on intro section to fall under navbar with resizing changes pt. 2
+      if(dropdownElements[3].style['padding-top'] === navOpenIntroPadding) {
+        dropdownElements[3].style['padding-top'] = navClosedIntroPadding;
+      }
     }
   }
   previousWindowWidth = window.innerWidth;
@@ -48,12 +52,12 @@ const toggleDropdown = (pressed) => {
     dropdownElements[0].style['display'] = 'none';
     dropdownElements[1].style['display'] = 'inline-block';
     dropdownElements[2].style['display'] = 'flex';
-    dropdownElements[3].style['padding-top'] = '7rem';
+    dropdownElements[3].style['padding-top'] = navOpenIntroPadding;
   } else if(pressed === 'close') {
     dropdownElements[0].style['display'] = 'inline-block';
     dropdownElements[1].style['display'] = 'none';
     dropdownElements[2].style['display'] = 'none';
-    dropdownElements[3].style['padding-top'] = '2rem';
+    dropdownElements[3].style['padding-top'] = navClosedIntroPadding;
   }
 };
 
@@ -82,3 +86,12 @@ const viewProject = (aspect, hasExternalLink, link, embed_title) => {
     console.log('Unexpected parameter received: check for any typos');
   }
 };
+
+const viewExperience = (id) => {
+  const element = document.getElementById(id);
+  if(element.classList.contains('we-open')) {
+    element.classList.remove('we-open');
+  } else {
+    element.classList.add('we-open');
+  }
+}
