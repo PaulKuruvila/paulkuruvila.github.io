@@ -1,3 +1,38 @@
+const prog_languages = [
+  'JavaScript', 'HTML', 'CSS/SCSS', 'Python','C++', 'SQL', 'C#', 'Java', 'R', 'Tcl'
+];
+const prog_libFrames = ['React', 'Express.js', 'Jest', 'Tkinter'];
+const prog_tools = [
+  'Git', 'Jira', 'Github Actions', 'AWS CLI', 'Webpack', 'Visual Studio Code',  'Vim', 'RStudio', 
+  'Apache Rivet'
+];
+const prog_osPlatforms = ['Github', 'Node.js', 'AWS', 'Heroku', 'Vercel', 'Unity',
+  'Windows', 'Linux'
+];
+
+const skillItem = (skill, idx) => {
+  return `<li id='${skill}-${idx}'>${skill}</li>`;
+};
+
+const generateList = (list, skill) => {
+  let skill_list='';
+  list.map((lang, index) => {
+    skill_list += skillItem(lang, index);
+  })
+  document.getElementById(skill).innerHTML = skill_list;
+};
+
+const generateLists = () => {
+  generateList(prog_languages, 'prog_languages');
+  generateList(prog_libFrames, 'prog_libFrames');
+  generateList(prog_tools, 'prog_tools');
+  generateList(prog_osPlatforms, 'prog_osPlatforms');
+}
+
+window.onload = (e) => {
+  generateLists();
+}
+
 let dropdownElements = [];
 let previousWindowWidth = 0;
 let navOpenIntroPadding = '9rem';
