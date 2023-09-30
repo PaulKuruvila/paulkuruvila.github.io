@@ -423,7 +423,7 @@ nav #nav-options li a:focus-visible {
   background-color: var(--background);
   line-height: 1.3rem !important;
   padding: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   height: 256px;
 }
 
