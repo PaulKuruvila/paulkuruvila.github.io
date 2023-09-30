@@ -65,22 +65,28 @@ const viewSite = (link) => {
   window.open(link, '_blank');
 };
 
-const viewProject = (aspect, hasExternalLink, link, embed_title) => {
+const viewProject = (aspect, hasExternalLink, ref, embed_title) => {
   if(aspect === 'details') {
-    openModal();
+    let button_id = document.getElementById(ref); 
+    if(button_id.classList.contains('show-details'))
+      // close it
+      button_id.classList.remove('show-details');
+    else
+      // open it
+      button_id.classList.add('show-details');
     return;
   } else if(aspect === 'embed') {
     openModal();
     document.getElementById('project-embed').style['display'] = 'block';
     if(hasExternalLink) {
-      document.getElementById('project-embed').setAttribute('src', link);
+      document.getElementById('project-embed').setAttribute('src', ref);
       document.getElementById('project-embed').setAttribute('title', embed_title);
       document.getElementById('project-site-btn').style['display'] = 'block';
       document.getElementById('project-close-btn').style['top'] = '60%';
     }
     return;
   } else if(aspect === 'redirect') {
-    window.open(link,'_blank');
+    window.open(ref,'_blank');
     return;
   } else {
     console.log('Unexpected parameter received: check for any typos');

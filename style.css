@@ -327,7 +327,7 @@ nav #nav-options li a:focus-visible {
 }
 
 /* Styling for SkyAware Anywhere project image */
-#skyaware {
+#skyaware-img {
   background: var(--nav) url('assets/images/skyaware.svg') repeat-y center;
   background-size: 200px;
 }
@@ -340,20 +340,44 @@ nav #nav-options li a:focus-visible {
   border: none;
   background-color: var(--text);
   color: var(--background);
+  border-top: 1px solid var(--nav);
+  z-index: 1;
+}
+
+.project .details-container {
+  position: relative;
+  display: block;
+  height: 72px;
+  top: 0px;
+  background-color: var(--nav);
+  transition: top ease-in-out 0.7s;
+}
+
+.project .details-container.show-details {
+  top: -185px; 
+}
+
+.project .details-container.show-details p {
+  display: block;
 }
 
 .project button:hover {
   background-color: var(--interact);
 }
 
-.project button.details {
-  bottom: 0px;
+.project button.view {
+  top: 220px;
 }
 
-.project button.view {
-  bottom: 34px;
-  border-top: 1px solid var(--nav);
-  border-bottom: 1px solid var(--nav);
+.project p {
+  position: relative;
+  top: 36px;
+  z-index: 0;
+  background-color: var(--background);
+  line-height: 1.3rem !important;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  height: 256px;
 }
 
 /* About Me section */
@@ -481,12 +505,12 @@ nav #nav-options li a:focus-visible {
   top: 0px;
 }
 
-.we-open a {
+.we-open a, .project a {
   color: var(--text);
   text-decoration: underline var(--subtitle);
 }
 
-.we-open a:hover {
+.we-open a:hover, .project a:hover {
   color: var(--interact);
 }
 
@@ -655,12 +679,12 @@ nav #nav-options li a:focus-visible {
     width: 90%;
   }
 
-  #footer a, .we-open a {
+  #footer a, .we-open a, .project a {
     text-decoration: none;
     color: var(--interact);
   }
 
-  #footer a:hover, .we-open a:hover {
+  #footer a:hover, .we-open a:hover, .project a:hover {
     text-decoration: underline solid var(--subtitle);
   }
 }

@@ -54,18 +54,35 @@
       <div class="project">
         <label>UbiWeather</label>
         <img src="assets/images/ubiweather.png" alt="ubiweather" />
-        <button class="details" onclick="viewProject('details')">View Details</button>
+        <div class="details-container" id="ubiweather">
+          <button class="details" onclick="viewProject('details', false, 'ubiweather')">View Details</button>
+          <p>Weather app written in JavaScript that utilizes the React library for the frontend, 
+            Express framework for the backend, and OpenWeatherMap API for the weather data.
+          </p>
+        </div>
         <button class="view" onclick="viewProject('embed', true, 'https://ubiweather.vercel.app', 'UbiWeather App')">View Project</button>
       </div>
-      <div class="project" id="skyaware">
+      <div class="project" id="skyaware-img">
         <label>SkyAware Anywhere</label>
-        <button class="details" onclick="viewProject('details')">View Details</button>
+        <img style="opacity: 0;" />
+        <div class="details-container" id="skyaware">
+          <button class="details" onclick="viewProject('details', false, 'skyaware')">View Details</button>
+          <p>Migrated FlightAware's SkyAware Anywhere service from within their monolithic web 
+            infrastructure to run as a stand-alone service on AWS. You can learn more about this project 
+            <a href="https://flightaware.engineering/summer-intern-projects/" target="_blank" rel="noopener noreferrer">here</a>.
+          </p>
+        </div>
         <button class="view" onclick="viewProject('redirect', true, 'https://skyaware-aws.flightaware.com')">View Project</button>
       </div>
       <div class="project">
         <label>Project 3</label>
         <img src="" alt="project3" />
-        <button class="details" onclick="viewProject('details')">View Details</button>
+        <div class="details-container" id="project3">
+          <button class="details" onclick="viewProject('details', false, 'project3')">View Details</button>
+          <p><b style="font-size: 1.5rem;">More to come!!!</b><br />I'm still currently adding my
+             existing projects to this page.<br /><b>Thank you for your patience</b>, and I can't 
+             wait to share them with you!</p>
+        </div>
         <button class="view" onclick="viewProject('embed')">View Project</button>
       </div>
     </div>
