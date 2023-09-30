@@ -382,6 +382,7 @@ nav #nav-options li a:focus-visible {
 }
 
 .section h3::before, .section h3::after {
+  display: inline-block;
   position: relative;
   color: var(--interact);
   transition: all ease-in 0.2s;
@@ -411,8 +412,76 @@ nav #nav-options li a:focus-visible {
   color: var(--text);
 }
 
-.we-open::after {
-  
+.work-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  overflow: hidden;
+}
+
+.work-container .we-details {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  top: -500px;
+  border-bottom: 2px solid var(--title);
+  transition: top ease-in 0.3s;
+}
+
+.work-container h3 {
+  transition: all ease-in 0.3s;
+  z-index: 2;
+}
+
+.work-container img {
+  display: none;
+  position: relative;
+  top: -200px;
+  width: 150px;
+  padding: 0.5rem;
+}
+
+.work-container p {
+  display: none;
+  position: relative;
+}
+
+.we-open .we-details {
+  top: 0px;
+}
+
+.we-open h3::before {
+  transform: rotate(90deg);
+  top: -2px;
+  right: 20px !important;
+}
+
+.we-open h3::after {
+  transform: rotate(-90deg);
+  top: -2px;
+  left: 20px !important;
+}
+
+.we-open p {
+  display: block;
+  top: 0px;
+}
+
+.we-open a {
+  color: var(--text);
+  text-decoration: underline var(--subtitle);
+}
+
+.we-open a:hover {
+  color: var(--interact);
+}
+
+.we-open img {
+  display: inline;
+  top: 0px;
 }
 
 /* Contact section */
