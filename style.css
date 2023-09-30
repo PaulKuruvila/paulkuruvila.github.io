@@ -582,6 +582,10 @@ nav #nav-options li a:focus-visible {
     padding: 5vh 7.5% 0;
   }
 
+  .section .anchor {
+    top: -9rem;
+  }
+
   #intro.section {
     padding-top: 9rem;
   }
