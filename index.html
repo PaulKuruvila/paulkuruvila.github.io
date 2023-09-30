@@ -32,7 +32,7 @@
   </nav>
   <div id="modal-backdrop">
     <iframe id="project-embed" src="" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <button id="project-site-btn" onclick="viewSite(document.getElementById('project-embed').getAttribute('src'))">View on site</button>
+    <button id="project-site-btn" onclick="viewSite(document.getElementById('project-embed').getAttribute('src'))">View on site<i class="fa fa-external-link" aria-hidden="true"></i></button>
     <button id="project-close-btn" onclick="closeModal()"><i class="fas fa-times" aria-hidden="true"></i></button>
   </div>
   <div class="section" id="intro">
@@ -72,7 +72,9 @@
             <a href="https://flightaware.engineering/summer-intern-projects/" target="_blank" rel="noopener noreferrer">here</a>.
           </p>
         </div>
-        <button class="view" onclick="viewProject('redirect', true, 'https://skyaware-aws.flightaware.com')">View Project</button>
+        <button class="view" onclick="viewProject('redirect', true, 'https://skyaware-aws.flightaware.com')">
+          View Project<i class="fa fa-external-link" aria-hidden="true"></i>
+        </button>
       </div>
       <div class="project">
         <label>Project 3</label>
@@ -83,7 +85,9 @@
              existing projects to this page.<br /><b>Thank you for your patience</b>, and I can't 
              wait to share them with you!</p>
         </div>
-        <button class="view" onclick="viewProject('embed')">View Project</button>
+        <button class="view" onclick="viewProject('redirect', true, 'https://github.com/PaulKuruvila')">
+          View Project<i class="fa fa-external-link" aria-hidden="true"></i>
+        </button>
       </div>
     </div>
   </div>

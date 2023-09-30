@@ -187,6 +187,13 @@ nav #nav-options li a:focus-visible {
   color: var(--text);
 }
 
+#project-site-btn .fa-external-link {
+  font-size: 1rem;
+  position: relative;
+  left: 10px;
+  padding-right: 10px;
+}
+
 #modal-backdrop #project-close-btn:hover, #project-site-btn:hover {
   background-color: var(--interact);
 }
@@ -394,10 +401,15 @@ nav #nav-options li a:focus-visible {
   content: '<';
 }
 
-/* .project button */
-
 .project button:hover {
   background-color: var(--interact);
+}
+
+.project button .fa-external-link {
+  position: relative;
+  top: 2px;
+  left: 10px;
+  font-size: 1rem;
 }
 
 .project button.view {
