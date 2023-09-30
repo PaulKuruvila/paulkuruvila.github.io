@@ -397,6 +397,7 @@ nav #nav-options li a:focus-visible {
   top: -12px;
   height: 3px;
   background-color: var(--title);
+  z-index: -1;
 }
 
 #about-section.section h2#experience {
@@ -463,6 +464,65 @@ nav #nav-options li a:focus-visible {
   transition: top ease-in 0.3s;
 }
 
+.work-container .we-timeline {
+  display: none;
+  position: relative;
+  font-size: 4rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 175px;
+  margin: 1rem 0 0.5rem;
+}
+
+.work-container .fa-calendar-o {
+  position: relative;
+  background-color: var(--background);
+  z-index: 1;
+}
+
+.fa-calendar-o h2, .fa-calendar-o  p {
+  position: absolute !important;
+  left: 5px !important;
+  width: 40px;
+  z-index: 3;
+}
+
+.fa-calendar-o h2 {
+  top: 20px !important;
+  font-size: 1.7rem;
+  overflow: hidden;
+  color: var(--title);
+}
+
+.fa-calendar-o h2::after {
+  top: -10px !important;
+  height: 1px !important;
+  background-color: var(--text) !important;
+}
+
+.fa-calendar-o p {
+  top: 33px !important;
+  left: 15px !important;
+  color: var(--subtitle);
+}
+
+.fa-calendar-o h3 {
+  position: relative;
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--title);
+}
+
+.fa-calendar-o h3::before, .fa-calendar-o h3::after {
+  content: '' !important;
+}
+
+.work-container .fa-long-arrow-right {
+  position: relative;
+  top: -10px;
+  font-size: 2.5rem;
+}
+
 .work-container h3 {
   transition: all ease-in 0.3s;
   z-index: 2;
@@ -498,6 +558,10 @@ nav #nav-options li a:focus-visible {
   transform: rotate(-90deg);
   top: -2px;
   left: 20px !important;
+}
+
+.we-open .we-timeline {
+  display: flex;
 }
 
 .we-open p {
@@ -620,6 +684,16 @@ nav #nav-options li a:focus-visible {
 
   .work-container {
     width: 80%;
+  }
+
+  .fa-calendar-o h2 {
+    top: 12px !important;
+    left: 4px !important;
+    font-size: 1.5rem;
+  }
+
+  .fa-calendar-o p {
+    top: 31px !important;
   }
 
   #footer p {
