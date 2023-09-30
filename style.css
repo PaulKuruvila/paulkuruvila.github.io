@@ -205,7 +205,14 @@ nav #nav-options li a:focus-visible {
   align-items: center;
   color: var(--text);
   background-color: var(--background);
-  padding: 5rem 15% 0;
+  padding: 2rem 15% 0;
+}
+
+.section .anchor {
+  opacity: 0;
+  background-color: red;
+  position: relative;
+  top: -6.5rem;
 }
 
 .section h1 {
@@ -350,7 +357,8 @@ nav #nav-options li a:focus-visible {
 }
 
 /* About Me section */
-#about.section h2 {
+#about-section.section h2 {
+  cursor: default;
   position: relative;
   top: 30px;
   left: -50%;
@@ -358,7 +366,7 @@ nav #nav-options li a:focus-visible {
   margin-bottom: 2.5rem;
 }
 
-#about.section h2::after {
+#about-section.section h2::after {
   content: '';
   display: block;
   position: relative;
@@ -367,11 +375,11 @@ nav #nav-options li a:focus-visible {
   background-color: var(--title);
 }
 
-#about.section h2#experience {
+#about-section.section h2#experience {
   left: -24%;
 }
 
-#about.section .logo {
+#about-section.section .logo {
   margin: -1rem 0 1rem;
   width: 100px;
 }
@@ -442,6 +450,7 @@ nav #nav-options li a:focus-visible {
   top: -200px;
   width: 150px;
   padding: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .work-container p {
@@ -451,6 +460,8 @@ nav #nav-options li a:focus-visible {
 
 .we-open .we-details {
   top: 0px;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .we-open h3::before {
@@ -485,8 +496,8 @@ nav #nav-options li a:focus-visible {
 }
 
 /* Contact section */
-#contact.section {
-  padding: 10vh 10vh 5vh;
+#contact-section {
+  padding: 10vh 10vh 0;
   min-height: 0px;
 }
 
@@ -567,12 +578,20 @@ nav #nav-options li a:focus-visible {
     padding: 0.8rem;
   }
 
+  .section {
+    padding: 5vh 7.5% 0;
+  }
+
   #intro.section {
     padding-top: 9rem;
   }
 
   .section h2, .section p {
     line-height: 2.3rem;
+  }
+
+  .work-container {
+    width: 80%;
   }
 
   #footer p {
@@ -586,16 +605,16 @@ nav #nav-options li a:focus-visible {
     --num-cols: 1;
   }
 
-  .section {
-    padding: 15vh 7.5% 0;
-  }
-
-  #about.section h2 {
+  #about-section.section h2 {
     left: -45%;
   }
 
-  #about.section h2#experience {
+  #about-section.section h2#experience {
     left: -24%;
+  }
+
+  .work-container {
+    width: 90%;
   }
 }
 
@@ -616,15 +635,19 @@ nav #nav-options li a:focus-visible {
     padding-top: 4rem;
   }
 
-  #about.section h2 {
+  #about-section.section h2 {
     left: -36%;
   }
 
-  #about.section h2#experience {
+  #about-section.section h2#experience {
     left: -28%;
   }
 
-  #about.section .logo {
+  #about-section.section .logo {
     width: 70px;
+  }
+
+  .work-container {
+    width: 90%;
   }
 }

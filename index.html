@@ -35,7 +35,7 @@
     <button id="project-site-btn" onclick="viewSite(document.getElementById('project-embed').getAttribute('src'))">View on site</button>
     <button id="project-close-btn" onclick="closeModal()"><i class="fas fa-times" aria-hidden="true"></i></button>
   </div>
-  <div class="section" id="intro" href="#">
+  <div class="section" id="intro">
     <h1>Intro</h1>
     <h2>Hey there, and welcome to my portfolio page!</h2>
     <img src="assets/images/Link_Cooking.gif" alt="candid"/>
@@ -46,30 +46,32 @@
        about me and view some of the different projects and apps I've worked on!
     </p>
   </div>
-  <div class="section" id="projects" href="#projects">
+  <div class="section" id="projects-section">
+    <div class="anchor" id="projects"></div>
     <h1>Projects</h1>
     <h2>Below are some of the projects I've worked on;<br />feel free to check them out!</h2>
-  <div class="projects-container">
-    <div class="project">
-      <label>UbiWeather</label>
-      <img src="assets/images/ubiweather.png" alt="ubiweather" />
-      <button class="details" onclick="viewProject('details')">View Details</button>
-      <button class="view" onclick="viewProject('embed', true, 'https://ubiweather.vercel.app', 'UbiWeather App')">View Project</button>
-    </div>
-    <div class="project" id="skyaware">
-      <label>SkyAware Anywhere</label>
-      <button class="details" onclick="viewProject('details')">View Details</button>
-      <button class="view" onclick="viewProject('redirect', true, 'https://skyaware-aws.flightaware.com')">View Project</button>
-    </div>
-    <div class="project">
-      <label>Project 3</label>
-      <img src="" alt="project3" />
-      <button class="details" onclick="viewProject('details')">View Details</button>
-      <button class="view" onclick="viewProject('embed')">View Project</button>
+    <div class="projects-container">
+      <div class="project">
+        <label>UbiWeather</label>
+        <img src="assets/images/ubiweather.png" alt="ubiweather" />
+        <button class="details" onclick="viewProject('details')">View Details</button>
+        <button class="view" onclick="viewProject('embed', true, 'https://ubiweather.vercel.app', 'UbiWeather App')">View Project</button>
+      </div>
+      <div class="project" id="skyaware">
+        <label>SkyAware Anywhere</label>
+        <button class="details" onclick="viewProject('details')">View Details</button>
+        <button class="view" onclick="viewProject('redirect', true, 'https://skyaware-aws.flightaware.com')">View Project</button>
+      </div>
+      <div class="project">
+        <label>Project 3</label>
+        <img src="" alt="project3" />
+        <button class="details" onclick="viewProject('details')">View Details</button>
+        <button class="view" onclick="viewProject('embed')">View Project</button>
+      </div>
     </div>
   </div>
-  </div>
-  <div class="section" id="about" href="#about">
+  <div class="section" id="about-section">
+    <div class="anchor" id="about"></div>
     <h1>About Me</h1>
     <h2>Education</h2>
     <img class="logo" src="assets/images/uh_red.png"/>
@@ -95,7 +97,8 @@
       </div>
     </div>
   </div>
-  <div class="section" id="contact" href="#contact">
+  <div class="section" id="contact-section">
+    <div class="anchor" id="contact"></div>
     <h1>Contact</h1>
     <p>You can reach me via:</p>
     <div id="ct-icons">
@@ -104,7 +107,7 @@
     </div>
   </div>
   <div id="footer">
-    <p>Site designed and created by <a href="https://github.com/PaulKuruvila/paulkuruvila.github.io" target="_blank" rel="noopener noreferrer">Paul Kuruvila</a>.</p>
+    <p>Designed & Created by <a href="https://github.com/PaulKuruvila/paulkuruvila.github.io" target="_blank" rel="noopener noreferrer">Paul Kuruvila</a>.</p>
   </div>
 </body>
 </html>
