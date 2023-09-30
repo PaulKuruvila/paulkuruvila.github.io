@@ -654,4 +654,13 @@ nav #nav-options li a:focus-visible {
   .work-container {
     width: 90%;
   }
+
+  #footer a, .we-open a {
+    text-decoration: none;
+    color: var(--interact);
+  }
+
+  #footer a:hover, .we-open a:hover {
+    text-decoration: underline solid var(--subtitle);
+  }
 }
