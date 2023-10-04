@@ -36,20 +36,18 @@
     <button id="project-close-btn" onclick="closeModal()"><i class="fas fa-times" aria-hidden="true"></i></button>
   </div>
   <div class="section" id="intro">
-    <h1>Intro</h1>
-    <h2>Hey there, and welcome to my portfolio page!</h2>
+    <h1>Hey there,<br />I'm Paul Kuruvila!</h1>
     <img src="assets/images/Link_Cooking.gif" alt="candid"/>
     <div id="cover-up"><label id="let">LET<span id="him">HIM</span></label></div>
-    <p>My name is Paul Kuruvila, and I am a computer software engineer with aspirations to be
-       employed as a full stack developer. I am very passionate about programming and enjoy 
-       working on various projects to further my knowledge. On this page, you can learn more
-       about me and view some of the different projects and apps I've worked on!
+    <p>I'm a computer software engineer with aspirations to be employed as a full stack developer.
+       I'm very passionate about programming and enjoy working on various projects to further my
+       knowledge. On this page, you can learn more about me and view some of the different projects
+       and apps I've worked on!
     </p>
   </div>
   <div class="section" id="projects-section">
     <div class="anchor" id="projects"></div>
     <h1>Projects</h1>
-    <h2>Below are some of the projects I've worked on;<br />feel free to check them out!</h2>
     <div class="projects-container">
       <div class="project">
         <label>UbiWeather</label>
@@ -88,6 +86,29 @@
         <button class="view" onclick="viewProject('redirect', true, 'https://github.com/PaulKuruvila')">
           View Project<i class="fa fa-external-link" aria-hidden="true"></i>
         </button>
+      </div>
+    </div>
+    <div class="skills-container">
+      <h3>Skills</h3>
+      <div class="row">
+        <h1>Programming<br />Languages</h1>
+        <ul class="skill-list" id="prog_languages" onclick="generateList(prog_languages, 'prog_languages')">
+        </ul>
+      </div>
+      <div class="row">
+        <h1>Libraries/<br />Frameworks</h1>
+        <ul class="skill-list" id="prog_libFrames">
+        </ul>
+      </div>
+      <div class="row">
+        <h1>Tools</h1>
+        <ul class="skill-list" id="prog_tools">
+        </ul>
+      </div>
+      <div class="row">
+        <h1>Platforms/<br />OS</h1>
+        <ul class="skill-list" id="prog_osPlatforms">
+        </ul>
       </div>
     </div>
   </div>
@@ -129,34 +150,10 @@
         <p>I'm working on it. <span style="font-size: 1.3rem;">👍</span></p>
       </div>
     </div>
-    <div class="skills-container">
-      <h3>Skills</h3>
-      <div class="row">
-        <h1>Programming<br />Languages</h1>
-        <ul class="skill-list" id="prog_languages" onclick="generateList(prog_languages, 'prog_languages')">
-        </ul>
-      </div>
-      <div class="row">
-        <h1>Libraries/<br />Frameworks</h1>
-        <ul class="skill-list" id="prog_libFrames">
-        </ul>
-      </div>
-      <div class="row">
-        <h1>Tools</h1>
-        <ul class="skill-list" id="prog_tools">
-        </ul>
-      </div>
-      <div class="row">
-        <h1>Platforms/<br />OS</h1>
-        <ul class="skill-list" id="prog_osPlatforms">
-        </ul>
-      </div>
-    </div>
   </div>
   <div class="section" id="contact-section">
     <div class="anchor" id="contact"></div>
-    <h1>Contact</h1>
-    <p>You can reach me via:</p>
+    <p>You can <span>reach me via:</span></p>
     <div id="ct-icons">
       <a href="https://www.linkedin.com/in/paulkuruvila" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
       <a href="mailto:paulrkuruvila@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-envelope" aria-hidden="true"></i></a>

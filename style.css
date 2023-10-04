@@ -20,6 +20,10 @@ body {
   background-color: var(--background);
 }
 
+p {
+  font-weight: 300;
+}
+
 /* Navbar */
 nav {
   display: flex;
@@ -106,6 +110,7 @@ nav #nav-options li a:focus-visible {
   display: flex;
   position: relative;
   font-size: 1.75rem;
+  font-weight: 300;
   margin-right: 10%;
   padding: 1rem 0;
   transition: padding ease-in 0.2s;
@@ -213,6 +218,11 @@ nav #nav-options li a:focus-visible {
   color: var(--text);
   background-color: var(--background);
   padding: 2rem 15% 0;
+  min-height: 65vh;
+}
+
+.section:not(#intro) {
+  margin-top: 10rem;
 }
 
 .section .anchor {
@@ -223,11 +233,20 @@ nav #nav-options li a:focus-visible {
 }
 
 .section h1 {
-  font-size: 3rem;
+  font-size: 6rem;
+  line-height: 4rem;
   color: var(--subtitle);
-  margin-bottom: -1rem;
   padding-bottom: 1rem;
-  white-space: nowrap;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.section h1, h2, h3 {
+  font-weight: 400;
+}
+
+#intro.section h1 {
+  z-index: 3;
 }
 
 .section h2 {
@@ -236,7 +255,7 @@ nav #nav-options li a:focus-visible {
 }
 
 .section p {
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
 }
 
@@ -290,6 +309,10 @@ nav #nav-options li a:focus-visible {
   transform: rotate(90deg);
 }
 
+#intro p {
+  margin-top: 1rem;
+}
+
 /* Projects section */
 .projects-container {
   --num-cols: 3;
@@ -297,8 +320,8 @@ nav #nav-options li a:focus-visible {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(var(--num-cols),1fr);
+  justify-items: center;
   overflow: hidden;
-  padding: 1rem;
 }
 
 .project {
@@ -308,29 +331,29 @@ nav #nav-options li a:focus-visible {
   overflow: hidden;
   border-radius: 20px;
   border: 2px solid black;
-  height: 256px;
-  width: 256px;
+  height: 345px;
+  width: 345px;
 }
 
 .project label {
   position: absolute;
   text-align: center;
-  text-indent: -50px;
+  text-indent: -60px;
   color: var(--nav);
   background-color: var(--title);
   width: 80%;
   font-size: 1.5rem;
   transform: rotate(-26deg);
   top: 11px;
-  left: -36px;
+  left: -60px;
   padding: 0px 25px;
 }
 
 .project img {
   background-color: var(--nav);
   object-fit: cover;
-  width: 256px;
-  height: 186px;
+  width: 345px;
+  height: 275px;
 }
 
 /* Styling for SkyAware Anywhere project image */
@@ -361,7 +384,7 @@ nav #nav-options li a:focus-visible {
 }
 
 .project .details-container.show-details {
-  top: -185px; 
+  top: -275px;
 }
 
 .project .details-container.show-details p {
@@ -413,7 +436,7 @@ nav #nav-options li a:focus-visible {
 }
 
 .project button.view {
-  top: 220px;
+  top: 309px;
 }
 
 .project p {
@@ -429,6 +452,7 @@ nav #nav-options li a:focus-visible {
 
 /* About Me section */
 #about-section.section h2 {
+  font-style: italic;
   cursor: default;
   position: relative;
   top: 30px;
@@ -588,6 +612,7 @@ nav #nav-options li a:focus-visible {
 .work-container p {
   display: none;
   position: relative;
+  font-size: 2rem;
 }
 
 .we-open .we-details {
@@ -640,8 +665,8 @@ nav #nav-options li a:focus-visible {
   width: 80%;
   padding: 2rem;
   border-radius: 10px;
-  background-color: var(--nav);
-  border: 2px solid var(--subtitle);
+  /* background-color: var(--nav); */
+  /* border: 2px solid var(--subtitle); */
   overflow: hidden;
   gap: 1rem;
   margin-top: 2rem;
@@ -652,8 +677,8 @@ nav #nav-options li a:focus-visible {
   position: relative;
   top: -5px;
   margin: -25px 0;
-  font-size: 3rem;
-  color: var(--title);
+  font-size: 4rem;
+  color: var(--text);
 }
 
 .skills-container .row {
@@ -665,8 +690,8 @@ nav #nav-options li a:focus-visible {
   padding: 1rem;
   gap: 1rem;
   border-radius: 20px;
-  background-color: var(--background);
-  border-bottom: 2px solid var(--subtitle);
+  background-color: #FF7F50;
+  border-bottom: 2px solid var(--text);
 }
 
 .skills-container .row h1 {
@@ -675,6 +700,8 @@ nav #nav-options li a:focus-visible {
   padding-left: 0.5rem;
   width: 35%;
   z-index: 2;
+  color: var(--text);
+  padding-bottom: 0;
 }
 
 .skills-container .row .skill-list {
@@ -703,13 +730,19 @@ nav #nav-options li a:focus-visible {
   min-height: 0px;
 }
 
+#contact-section p {
+  font-size: 3rem;
+  color: var(--subtitle);
+  font-weight: 400;
+}
+
 #ct-icons {
   display: flex;
   gap: 1rem;
 }
 
 #ct-icons i {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--title);
   text-shadow: 1px 1px 1px var(--subtitle);
 }
@@ -747,11 +780,33 @@ nav #nav-options li a:focus-visible {
 }
 
 /* Media queries */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1128px) {
   .projects-container {
     --num-cols: 2;
   }
 
+  .section h1 {
+    font-size: 4rem;
+  }
+
+  .section p {
+    font-size: 2rem;
+  }
+
+  .skills-container h3 {
+    font-size: 3rem;
+  }
+
+  #contact-section p {
+    font-size: 2.5rem;
+  }
+
+  #ct-icons i {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
   .skills-container {
     width: 85%;
   }
@@ -763,6 +818,26 @@ nav #nav-options li a:focus-visible {
   .skills-container .row .skill-list {
     font-size: 1rem;
     gap: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project {
+    width: 256px;
+    height: 256px;
+  }
+
+  .project .details-container.show-details {
+    top: -184px;
+  }
+
+  .project img {
+    width: 256px;
+    height: 184px;
+  }
+
+  .project button.view {
+    top: 220px;
   }
 }
 
@@ -805,7 +880,7 @@ nav #nav-options li a:focus-visible {
     padding-top: 9rem;
   }
 
-  .section h2, .section p {
+  .section h1, .section h2, .section p {
     line-height: 2.3rem;
   }
 
@@ -857,6 +932,24 @@ nav #nav-options li a:focus-visible {
     left: -24%;
   }
 
+  .project {
+    width: 345px;
+    height: 309px;
+  }
+
+  .project .details-container.show-details {
+    top: -239px;
+  }
+
+  .project img {
+    width: 345px;
+    height: 239px;
+  }
+
+  .project button.view {
+    top: 273px;
+  }
+
   .work-container {
     width: 90%;
   }
@@ -887,6 +980,10 @@ nav #nav-options li a:focus-visible {
     display: none;
   }
 
+  .section h1 {
+    font-size: 3rem;
+  }
+
   #intro.section {
     padding-top: 4rem;
   }
@@ -902,14 +999,40 @@ nav #nav-options li a:focus-visible {
   #about-section.section .logo {
     width: 70px;
   }
+  
+  .project {
+    width: 256px;
+    height: 256px;
+  }
+
+  .project .details-container.show-details {
+    top: -184px;
+  }
+
+  .project img {
+    width: 256px;
+    height: 184px;
+  }
+
+  .project button.view {
+    top: 220px;
+  }
+
+  .skills-container h3 {
+    font-size: 2.5rem;
+  }
+  
+  .skills-container .row h1 {
+    padding: 0;
+    font-size: 1.4rem;
+  }
 
   .work-container {
     width: 90%;
   }
 
-  .skills-container .row h1 {
-    padding: 0;
-    font-size: 1.4rem;
+  #contact-section span {
+    white-space: nowrap;
   }
 
   #footer a, .we-open a, .project a {
