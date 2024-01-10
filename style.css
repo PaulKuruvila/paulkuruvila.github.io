@@ -459,6 +459,7 @@ nav #nav-options li a:focus-visible {
   left: -50%;
   transform: rotate(-20deg);
   margin-bottom: 2.5rem;
+  z-index: 3;
 }
 
 #about-section.section h2::after {
@@ -480,38 +481,42 @@ nav #nav-options li a:focus-visible {
   width: 100px;
 }
 
-.section h3 {
+.section h3.company {
+  width: 100%;
+  background-color: white;
+  text-align: center;
   font-size: 2.3rem;
   cursor: pointer;
+  z-index: 2;
 }
 
-.section h3::before, .section h3::after {
+.section h3.company::before, .section h3.company::after {
   display: inline-block;
   position: relative;
   color: var(--interact);
   transition: all ease-in 0.2s;
 }
 
-.section h3::before {
+.section h3.company::before {
   content: '>';
   right: 20px;
 }
 
-.section h3::after {
+.section h3.company::after {
   content: '<';
   left: 20px;
 }
 
-.section h3:hover {
+.section h3.company:hover {
   color: var(--interact);
 }
 
-.section h3:hover::before {
+.section h3.company:hover::before {
   right: 10px;
   color: var(--text);
 }
 
-.section h3:hover::after {
+.section h3.company:hover::after {
   left: 10px;
   color: var(--text);
 }
@@ -572,21 +577,18 @@ nav #nav-options li a:focus-visible {
 }
 
 .fa-calendar-o p {
+  cursor: default;
   top: 33px !important;
   left: 15px !important;
   color: var(--subtitle);
 }
 
 .fa-calendar-o h3 {
+  cursor: default;
   position: relative;
   font-size: 1.8rem;
   text-align: center;
   color: var(--title);
-}
-
-.fa-calendar-o h3::before, .fa-calendar-o h3::after,
-.skills-container h3::before, .skills-container h3::after {
-  content: '' !important;
 }
 
 .work-container .fa-long-arrow-right {
