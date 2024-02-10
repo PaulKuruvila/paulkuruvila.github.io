@@ -1048,6 +1048,14 @@ nav #nav-options li a:focus-visible {
     left: -36px;
   }
 
+  .project label.big {
+    text-indent: -100px;
+  }
+  
+  .project label span {
+    left: -52px;
+  }
+
   .project .details-container.show-details {
     top: -184px;
   }
