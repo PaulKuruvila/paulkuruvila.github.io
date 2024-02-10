@@ -844,12 +844,12 @@ nav #nav-options li a:focus-visible {
   .project label.big {
     font-size: 1rem;
     top: -10px;
-    text-indent: -120px;
+    text-indent: -100px;
     max-height: 35px;
   }
   
   .project label span {
-    left: -65px;
+    left: -50px;
   }
 
   .project .details-container.show-details {
@@ -969,6 +969,14 @@ nav #nav-options li a:focus-visible {
   .project label {
     text-indent: -60px;
     left: -60px;
+  }
+
+  .project label.big {
+    text-indent: -120px;
+  }
+
+  .project label span {
+    left: -62px;
   }
 
   .project .details-container.show-details {
