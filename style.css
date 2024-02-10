@@ -347,6 +347,13 @@ nav #nav-options li a:focus-visible {
   top: 11px;
   left: -60px;
   padding: 0px 25px;
+  max-height: 55px;
+}
+
+.project label span {
+  position: relative;
+  top: -10px;
+  left: -30px;
 }
 
 .project img {
