@@ -841,6 +841,17 @@ nav #nav-options li a:focus-visible {
     left: -36px;
   }
 
+  .project label.big {
+    font-size: 1rem;
+    top: -10px;
+    text-indent: -120px;
+    max-height: 35px;
+  }
+  
+  .project label span {
+    left: -65px;
+  }
+
   .project .details-container.show-details {
     top: -184px;
   }
