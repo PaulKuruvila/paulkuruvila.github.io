@@ -464,7 +464,7 @@ nav #nav-options li a:focus-visible {
   position: relative;
   top: 30px;
   left: -50%;
-  transform: rotate(-20deg);
+  transform: rotate(-4deg);
   margin-bottom: 2.5rem;
   z-index: 3;
 }
@@ -687,7 +687,7 @@ nav #nav-options li a:focus-visible {
   top: -5px;
   margin: -25px 0;
   font-size: 4rem;
-  color: var(--text);
+  color: var(--title);
 }
 
 .skills-container .row {
@@ -699,8 +699,8 @@ nav #nav-options li a:focus-visible {
   padding: 1rem;
   gap: 1rem;
   border-radius: 20px;
-  background-color: #FF7F50;
-  border-bottom: 2px solid var(--text);
+  /* background-color: var(--nav); */
+  border-bottom: 2px solid var(--subtitle);
 }
 
 .skills-container .row h1 {
@@ -709,7 +709,7 @@ nav #nav-options li a:focus-visible {
   padding-left: 0.5rem;
   width: 35%;
   z-index: 2;
-  color: var(--text);
+  color: var(--subtitle);
   padding-bottom: 0;
 }
 
