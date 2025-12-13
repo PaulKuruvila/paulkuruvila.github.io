@@ -563,6 +563,10 @@ nav #nav-options li a:focus-visible {
   z-index: 1;
 }
 
+.work-container#ok-we img {
+  filter: drop-shadow(2px 2px 1px #3db0ff);
+}
+
 .fa-calendar-o h2, .fa-calendar-o  p {
   position: absolute !important;
   left: 5px !important;
