@@ -6,6 +6,7 @@
   --interact: seagreen;
   --title: #008080;
   --subtitle: #4B0082;
+  --subtitle-accent: #dfb3ff;
   --text: #333333;
 }
 
@@ -217,12 +218,11 @@ nav #nav-options li a:focus-visible {
   align-items: center;
   color: var(--text);
   background-color: var(--background);
-  padding: 2rem 15% 0;
-  min-height: 65vh;
+  padding: 1rem 15% 0;
 }
 
 .section:not(#intro) {
-  margin-top: 10rem;
+  margin-top: 2rem;
 }
 
 .section .anchor {
@@ -314,6 +314,16 @@ nav #nav-options li a:focus-visible {
 }
 
 /* Projects section */
+#projects-section {
+  border-top: 2px solid var(--subtitle);
+  border-bottom: 2px solid var(--subtitle);
+  background-color: var(--subtitle-accent);
+}
+
+#projects-section h1 {
+  color: var(--text);
+}
+
 .projects-container {
   --num-cols: 3;
   box-sizing: border-box;
@@ -465,7 +475,7 @@ nav #nav-options li a:focus-visible {
   top: 30px;
   left: -50%;
   transform: rotate(-4deg);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   z-index: 3;
 }
 
@@ -534,7 +544,9 @@ nav #nav-options li a:focus-visible {
   align-items: center;
   flex-direction: column;
   width: 70%;
+  max-height: 53px;
   overflow: hidden;
+  transition: all ease-in-out 0.8s;
 }
 
 .work-container .we-details {
@@ -543,12 +555,13 @@ nav #nav-options li a:focus-visible {
   flex-direction: column;
   align-items: center;
   top: -500px;
+  opacity: 0;
   border-bottom: 2px solid var(--title);
-  transition: top ease-in 0.3s;
+  transition: top ease-in 0.8s, opacity ease-in-out 0.8s;
 }
 
 .work-container .we-timeline {
-  display: none;
+  display: flex;
   position: relative;
   font-size: 4rem;
   justify-content: space-between;
@@ -614,7 +627,6 @@ nav #nav-options li a:focus-visible {
 }
 
 .work-container img {
-  display: none;
   position: relative;
   top: -200px;
   width: 150px;
@@ -623,15 +635,22 @@ nav #nav-options li a:focus-visible {
 }
 
 .work-container p {
-  display: none;
   position: relative;
   font-size: 2rem;
+}
+
+/* Work Experience Open */
+.we-open {
+  max-height: 1000px;
+  transition: all ease-in-out 1s;
 }
 
 .we-open .we-details {
   top: 0px;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
+  opacity: 1;
+  transition: all ease-in-out 1s;
 }
 
 .we-open h3::before {
@@ -644,10 +663,6 @@ nav #nav-options li a:focus-visible {
   transform: rotate(-90deg);
   top: -2px;
   left: 20px !important;
-}
-
-.we-open .we-timeline {
-  display: flex;
 }
 
 .we-open p {
@@ -677,9 +692,6 @@ nav #nav-options li a:focus-visible {
   align-items: center;
   width: 80%;
   padding: 2rem;
-  border-radius: 10px;
-  /* background-color: var(--nav); */
-  /* border: 2px solid var(--subtitle); */
   overflow: hidden;
   gap: 1rem;
   margin-top: 2rem;
@@ -691,7 +703,8 @@ nav #nav-options li a:focus-visible {
   top: -5px;
   margin: -25px 0;
   font-size: 4rem;
-  color: var(--title);
+  color: var(--background);
+  text-shadow: 1px 1px 1px var(--subtitle);
 }
 
 .skills-container .row {
@@ -703,8 +716,8 @@ nav #nav-options li a:focus-visible {
   padding: 1rem;
   gap: 1rem;
   border-radius: 20px;
-  /* background-color: var(--nav); */
-  border-bottom: 2px solid var(--subtitle);
+  background-color: var(--background);
+  border-bottom: 4px solid var(--subtitle);
 }
 
 .skills-container .row h1 {
@@ -733,19 +746,22 @@ nav #nav-options li a:focus-visible {
   display: flex;
   padding: 0 0.5rem;
   color: var(--background);
-  background-color: var(--text);
+  background-color: var(--subtitle);
   border-radius: 10px;
 }
 
 /* Contact section */
 #contact-section {
-  padding: 5vh 10vh 0;
   min-height: 0px;
+  background-color: var(--subtitle-accent);
+  border-top: 2px solid var(--subtitle);
+  padding: 1rem 0 0;
 }
 
 #contact-section p {
   font-size: 3rem;
-  color: var(--subtitle);
+  color: var(--background);
+  text-shadow: 1px 1px 1px var(--text);
   font-weight: 400;
 }
 
@@ -756,23 +772,29 @@ nav #nav-options li a:focus-visible {
 
 #ct-icons i {
   font-size: 2.5rem;
-  color: var(--title);
-  text-shadow: 1px 1px 1px var(--subtitle);
+  color: var(--subtitle);
+  text-shadow: 1px 1px 1px var(--background);
 }
 
 #ct-icons i:hover {
-  color: var(--interact);
+  color: var(--text);
 }
 
 #footer {
+  background-color: var(--subtitle-accent);
+  padding-top: 20px;
+}
+
+#footer-content {
   display: flex;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   width: min-content;
-  margin: 1rem auto 0;
-  padding: 1rem;
+  margin: 0 auto;
+  padding: 20px;
   color: var(--text);
-  border-top: 2px solid var(--nav);
+  border-top: 2px solid var(--subtitle);
+  background-color: var(--subtitle-accent);
 }
 
 #footer p {
@@ -782,8 +804,7 @@ nav #nav-options li a:focus-visible {
 
 #footer a {
   color: var(--text);
-  font-weight: bold;
-  text-decoration: underline solid var(--subtitle);
+  text-decoration: 2px solid underline var(--title);
   white-space: nowrap;
 }
 
