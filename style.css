@@ -576,6 +576,21 @@ nav #nav-options li a:focus-visible {
   z-index: 1;
 }
 
+.work-container .we-btn {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--text);
+  background-color: var(--nav);
+  border-radius: 10px;
+  border: 2px solid var(--text);
+  padding: 4px 20px;
+  font-size: 24px;
+}
+
+.work-container .we-btn:hover {
+  filter: brightness(0.9);
+}
+
 .work-container#ok-we img {
   filter: drop-shadow(2px 2px 1px #3db0ff);
 }
