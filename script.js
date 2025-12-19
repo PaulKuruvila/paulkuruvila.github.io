@@ -1,13 +1,12 @@
 const prog_languages = [
-  'JavaScript', 'HTML', 'CSS/SCSS', 'Python','C++', 'SQL', 'C#', 'Java', 'R', 'Tcl'
+  'TypeScript', 'JavaScript', 'HTML', 'CSS/SCSS', 'Python','C++', 'Rust', 'SQL', 
+  'C#', 'Java', 'R', 'Tcl'
 ];
-const prog_libFrames = ['React', 'Express.js', 'Jest', 'Tkinter'];
+const prog_libFrames = ['React', 'Express.js', 'Tailwind CSS', 'Jest', 'Tkinter'];
 const prog_tools = [
-  'Git', 'Jira', 'Github Actions', 'AWS CLI', 'Webpack', 'Visual Studio Code',  'Vim', 'RStudio', 
-  'Apache Rivet'
-];
-const prog_osPlatforms = ['Github', 'Node.js', 'AWS', 'Heroku', 'Vercel', 'Unity',
-  'Windows', 'Linux'
+  'PostgreSQL', 'Node.js', 'Amazon Web Services', 'AWS CLI', 'Supabase', 'Github Actions', 
+  'Jira', 'Vercel', 'Heroku', 'Lovable', 'Unity', 'Webpack', 'Visual Studio Code', 
+  'Vim', 'RStudio', 'Apache Rivet'
 ];
 
 const skillItem = (skill, idx) => {
@@ -26,7 +25,6 @@ const generateLists = () => {
   generateList(prog_languages, 'prog_languages');
   generateList(prog_libFrames, 'prog_libFrames');
   generateList(prog_tools, 'prog_tools');
-  generateList(prog_osPlatforms, 'prog_osPlatforms');
 }
 
 window.onload = (e) => {
