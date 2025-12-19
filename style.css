@@ -92,12 +92,12 @@ nav #nav-options li a:focus-visible {
 
 #nav-dropdown i {
   cursor: pointer;
-  color: var(--subtitle);
+  color: var(--text);
   font-size: 1.5rem;
 }
 
 #nav-dropdown i:hover {
-  color: var(--interact);
+  filter: brightness(0.8);
 }
 
 #nav-dropdown i.fa-times {
@@ -755,13 +755,13 @@ nav #nav-options li a:focus-visible {
   min-height: 0px;
   background-color: var(--subtitle-accent);
   border-top: 2px solid var(--subtitle);
-  padding: 1rem 0 0;
+  padding: 1rem 0 2rem;
 }
 
 #contact-section p {
   font-size: 3rem;
-  color: var(--background);
-  text-shadow: 1px 1px 1px var(--text);
+  color: var(--title);
+  text-shadow: 1px 1px 1px var(--background);
   font-weight: 400;
 }
 
@@ -777,39 +777,6 @@ nav #nav-options li a:focus-visible {
 }
 
 #ct-icons i:hover {
-  color: var(--text);
-}
-
-#footer {
-  background-color: var(--subtitle-accent);
-  padding-top: 20px;
-}
-
-#footer-content {
-  display: flex;
-  justify-content: center;
-  font-size: 2rem;
-  width: min-content;
-  margin: 0 auto;
-  padding: 20px;
-  color: var(--text);
-  border-top: 2px solid var(--subtitle);
-  background-color: var(--subtitle-accent);
-}
-
-#footer p {
-  width: 35vw;
-  text-align: center;
-}
-
-#footer a {
-  color: var(--text);
-  text-decoration: 2px solid underline var(--title);
-  white-space: nowrap;
-}
-
-#footer a:hover {
-  cursor: pointer;
   color: var(--interact);
 }
 
@@ -966,11 +933,6 @@ nav #nav-options li a:focus-visible {
     font-size: 1.5rem;
     width: 35%;
   }
-
-  #footer p {
-    line-height: 1.3rem;
-    width: 50vw;
-  }
 }
 
 @media screen and (max-width: 640px) {
@@ -1121,14 +1083,5 @@ nav #nav-options li a:focus-visible {
 
   #contact-section span {
     white-space: nowrap;
-  }
-
-  #footer a, .we-open a, .project a {
-    text-decoration: none;
-    color: var(--interact);
-  }
-
-  #footer a:hover, .we-open a:hover, .project a:hover {
-    text-decoration: underline solid var(--subtitle);
   }
 }
